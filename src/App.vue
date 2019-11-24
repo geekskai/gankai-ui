@@ -6,7 +6,7 @@
 export default {
   data() {
     return {
-      test: "简单构建vue脚手架项目~~~~"
+      test: "gankai-ui 初始化~~~~"
     };
   }
 };
