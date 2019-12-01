@@ -1,0 +1,26 @@
+{
+    "presets": [ // 一系列plguins 的集合
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "browsers": [
+                        ">1%",
+                        "last 2 versions"
+                    ]
+                }
+            }
+        ],
+        [
+            "vue",
+            {
+                "eventModifiers": false
+            }
+        ]
+    ],
+    "plugins": [ // 一个plugins对应一个功能
+        [
+            "@babel/transform-runtime"
+        ]
+    ]
+}
