@@ -109,23 +109,23 @@
 
 ### 图标按钮
 带图标的按钮可增强辨识度（有文字）或节省空间（无文字）。
-设置```icon```属性即可，icon 的列表可以参考 VV-UI 的 icon 组件，也可以设置在文字右边的 icon ，只要使用```i```标签即可，可以使用自定义图标。
+设置```icon```属性即可，icon 的列表可以参考 gankai-ui 的 icon 组件，也可以设置在文字右边的 icon ，只要使用```i```标签即可，可以使用自定义图标。
 <div class="demo-block">
-  <gk-button icon="w-icon-tag" type="primary"></gk-button>
-  <gk-button icon="w-icon-close" type="primary"></gk-button>
-  <gk-button icon="w-icon-smile" type="primary"></gk-button>
-  <gk-button icon="w-icon-search" type="primary">搜索</gk-button>
-  <gk-button icon="w-icon-cloudfill" type="primary">下载</gk-button>
+  <gk-button icon="gk-icon-tag" type="primary"></gk-button>
+  <gk-button icon="gk-icon-close" type="primary"></gk-button>
+  <gk-button icon="gk-icon-smile" type="primary"></gk-button>
+  <gk-button icon="gk-icon-search" type="primary">搜索</gk-button>
+  <gk-button icon="gk-icon-cloudfill" type="primary">下载</gk-button>
 </div>
 
 ::: demo
 ```html
 
-<gk-button icon="w-icon-tag" type="primary"></gk-button>
-<gk-button icon="w-icon-close" type="primary"></gk-button>
-<gk-button icon="w-icon-smile" type="primary"></gk-button>
-<gk-button icon="w-icon-search" type="primary">搜索</gk-button>
-<gk-button icon="w-icon-cloudfill" type="primary">下载</gk-button>
+<gk-button icon="gk-icon-tag" type="primary"></gk-button>
+<gk-button icon="gk-icon-close" type="primary"></gk-button>
+<gk-button icon="gk-icon-smile" type="primary"></gk-button>
+<gk-button icon="gk-icon-search" type="primary">搜索</gk-button>
+<gk-button icon="gk-icon-cloudfill" type="primary">下载</gk-button>
 
 ```
 :::

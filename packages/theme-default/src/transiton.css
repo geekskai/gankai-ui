@@ -1,19 +1,19 @@
-.w-zoom-in-center-enter-active,
-.w-zoom-in-center-leave-active {
+.gk-zoom-in-center-enter-active,
+.gk-zoom-in-center-leave-active {
   transition: all .3s cubic-bezier(.55,0,.1,1);
 }
-.w-zoom-in-center-enter,
-.w-zoom-in-center-leave-active {
+.gk-zoom-in-center-enter,
+.gk-zoom-in-center-leave-active {
   opacity: 0;
   transform: scaleX(0);
 }
 
-@keyframes w-spinner {
+@keyframes gk-spinner {
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-@keyframes w-opacity
+@keyframes gk-opacity
 {
   0%   {opacity: 1;}
   10%   {opacity: 0.9;}

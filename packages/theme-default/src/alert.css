@@ -1,6 +1,6 @@
 @import "./common/var.css";
 
-@b w-alert {
+@b gk-alert {
   padding: var(--alert-padding);
   border-radius: var(--border-radius-base);
   position: relative;
@@ -65,7 +65,7 @@
   }
 }
 
-.w-alert-fade-enter,
-.w-alert-fade-leave-active {
+.gk-alert-fade-enter,
+.gk-alert-fade-leave-active {
   opacity: 0;
 }

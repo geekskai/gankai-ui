@@ -43,7 +43,7 @@
           </div>
         </gk-col>
         <gk-col :span="12" class="text-right">
-          <a href="https://github.com/VV-UI/VV-UI">
+          <a href="https://github.com/gankai-ui/gankai-ui">
             <svg aria-hidden="true" height="80" version="1.1" viewBox="0 0 16 16" width="40">
               <path
                 fill-rule="evenodd"

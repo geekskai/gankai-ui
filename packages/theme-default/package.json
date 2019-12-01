@@ -1,14 +1,14 @@
 {
-  "name": "vv-ui-theme-default",
+  "name": "gankai-ui-theme-default",
   "version": "1.0.0",
-  "description": "vv-ui component default theme.",
+  "description": "gankai-ui component default theme.",
   "main": "lib/index.css",
   "scripts": {
     "dev": "gulp build && gulp watch",
     "build": "gulp build"
   },
   "keywords": [
-    "vv-ui",
+    "gankai-ui",
     "theme"
   ],
   "author": "monkeywang",
