@@ -204,6 +204,7 @@ const webpackConfig = {
         loader: 'url-loader',
         options: {
           limit: 10000,
+          esModule: false,// 最新版本的需要加上这个 https://github.com/vuejs/vue-loader/issues/1612
           name: assetsPath('img/[name].[hash:7].[ext]')
         }
       },

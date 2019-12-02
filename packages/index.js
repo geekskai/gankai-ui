@@ -49,6 +49,5 @@ export default {
     GkLimitTextArea,
     MetaInfo,
     GkAlert,
-    // GkLoadingBar,
     Skeleton
 }
