@@ -1,6 +1,6 @@
 {
   "name": "gankai-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A UI framework similar to element-UI",
   "main": "packages/index.js",
   "author": "gankai",
