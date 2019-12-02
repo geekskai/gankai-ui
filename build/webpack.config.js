@@ -84,12 +84,12 @@ const webpackConfig = {
     app: './examples/main.js'
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'index.js'
   },
   devtool: 'inline-source-map',   //生曾map 映射对应代码  方便错误查询
   devServer: {
-    contentBase: './dist',    // 告诉服务从哪提供代码内容(静态文件这么使用)
+    contentBase: '../dist',    // 告诉服务从哪提供代码内容(静态文件这么使用)
     hot: true,    //hot模式开启
     port: 9000,
     overlay: true,
