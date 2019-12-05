@@ -41,8 +41,7 @@ export default {
     margin-bottom: 32px;
   }
   .side-nav-title {
-    padding: 0 24px 8px;
-    color: #FF6600;
+    color: #ff6600;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -70,11 +69,11 @@ export default {
       display: block;
       position: relative;
       padding: 6px 24px 6px 32px;
-      color: #616367;
+      color: #134da5;
       font-size: 20px;
     }
     .active {
-      color: #FF6600;
+      color: #ff6600;
     }
   }
 }

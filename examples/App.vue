@@ -2,7 +2,7 @@
   <div>
     <mainHeader>
     </mainHeader>
-    <div class="container" v-if="!isIndex">
+    <div class="app-body" v-if="!isIndex">
       <sideNav class="nav"></sideNav>
       <router-view class="view"></router-view>
     </div>
@@ -42,11 +42,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  margin: 20px;
+.app-body {
+  margin: 20px 10%;
   display: flex;
   flex-direction: row;
-  background-color: #fff;
   .nav {
     flex: 1;
   }
@@ -57,7 +56,7 @@ export default {
   }
 }
 
-.container:after {
+.app-body:after {
   content: "";
   clear: both;
   display: block;

@@ -1,9 +1,6 @@
 
 <template>
-  <header
-    class="page-header"
-    :style="$route.name === 'index' ? 'box-shadow:none' : 'box-shadow:0 10px 60px 0 rgba(29,29,31,0.07)'"
-  >
+  <header class="page-header">
     <div class="header-container">
       <router-link :to="{name: 'index'}">
         <!-- <img src="../assets/img/banner.png" width="100"> -->
@@ -22,10 +19,10 @@ export default {
 </script>
 <style type="text/scss" lang="scss">
 .page-header {
-  background-color: #fff;
-  box-shadow: 0 10px 60px 0 rgba(29, 29, 31, 0.07);
-  opacity: 0.98;
+  background: #2d3e50;
+  border-bottom: 1px solid #48698a;
   position: relative !important;
+  font-size: 22px;
   top: 0;
   left: 0;
   width: 100%;
@@ -39,6 +36,9 @@ export default {
     align-items: center;
     height: 80px;
     justify-content: space-between;
+    a {
+      color: #fff;
+    }
   }
 }
 </style>
