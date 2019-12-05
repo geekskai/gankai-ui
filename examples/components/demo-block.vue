@@ -40,7 +40,7 @@ export default {
   width: 100%;
   height: auto;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 22px;
   background-color: #f7f7f7;
   border: 1px solid #e2ecf4;
   border-top: none;
@@ -54,21 +54,21 @@ export default {
   width: 100%;
   text-align: center;
   display: inline-block;
-  color: #c5d9e8;
-  font-size: 12px;
+  color: #c5c7e8;
+  font-size: 14px;
   padding: 10px 0;
   background-color: #fafbfc;
 }
 .docs-trans:hover {
-    color: #409eff;
-    background-color: #f9fafc;
-    cursor: pointer;
+  color: #FF6600;
+  background-color: #f9fafc;
+  cursor: pointer;
 }
 
 .docs-demo__code,
 .highlight-wrapper,
 .docs-demo__meta {
-  padding: 0 20px;
+  // padding: 0 20px;
   overflow-y: auto;
 }
 

@@ -1,15 +1,12 @@
 <template>
   <div>
     <mainHeader>
-    
     </mainHeader>
-    <div class="container" v-if="!isIndex">
+    <div class="app-body" v-if="!isIndex">
       <sideNav class="nav"></sideNav>
       <router-view class="view"></router-view>
     </div>
     <router-view class="page" v-else></router-view>
-    <mainFooter v-if="!isIndex"></mainFooter>
-  
   </div>
 </template>
 
@@ -45,24 +42,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  margin: 48px auto;
-  width: 90%;
-  background-color: #fff;
-  box-shadow: 0 4px 30px 0 rgba(223, 225, 230, 0.5);
+.app-body {
+  margin: 20px 10%;
+  display: flex;
+  flex-direction: row;
   .nav {
-    float: left;
-    width: 210px;
+    flex: 1;
   }
   .view {
-    float: left;
-    width: calc(100% - 215px);
+    flex: 5;
     padding: 32px 48px 48px;
     box-sizing: border-box;
   }
 }
 
-.container:after {
+.app-body:after {
   content: "";
   clear: both;
   display: block;
