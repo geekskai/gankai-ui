@@ -19,4 +19,4 @@
 
 ## 贡献
 
-如果你在使用 `gankai-ui` 时遇到问题，或者有好的建议，欢迎给我们提 [Issue](https://github.com/gankai-ui/gankai-ui/issues) 或 [Pull Request](https://github.com/gankai-ui/gankai-ui/pulls)
+如果你在使用 `gankai-ui` 时遇到问题，或者有好的建议，欢迎给我们提 [Issue](https://github.com/GitHubGanKai/gankai-ui/issues) 或 [Pull Request](https://github.com/GitHubGanKai/gankai-ui/pulls)
