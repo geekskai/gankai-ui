@@ -23,8 +23,8 @@ export default {
 </script>
 <style type="text/scss" lang="scss">
 .page-header {
-  // background: #191414;
-   background: #2d3e50;
+  background: #191414;
+  //  background: #2d3e50;
   border-bottom: 1px solid #48698a;
   position: relative !important;
   font-size: 22px;

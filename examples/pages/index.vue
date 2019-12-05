@@ -30,8 +30,6 @@ export default {
 <style type="text/scss" lang="scss">
 .wrapper {
   .wrapper-header {
-    background: url("../assets/img/bg.png") no-repeat center center;
-    background-size: 100% 100%;
     text-align: center;
     padding: 100px 0;
     .logo-img {
