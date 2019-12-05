@@ -5,18 +5,10 @@
       <p class="side-nav-title">{{title}}</p>
       <div class="side-nav-items" v-for="(nav,idx) in data[title]" :key="idx">
         <template v-if="nav.desc">
-          <router-link
-            :class="$route.name===nav.name ? 'active' : ''"
-            v-if="nav.name"
-            :to="{name: nav.name}"
-          >{{nav.desc}}</router-link>
+          <router-link :class="$route.name===nav.name ? 'active' : ''" v-if="nav.name" :to="{name: nav.name}">{{nav.desc}}</router-link>
           <p v-else class="side-nav-group">{{nav.desc}}</p>
           <div v-for="(item,i) in nav.items" :key="i">
-            <router-link
-              :to="{name: item.name}"
-              :class="$route.name===item.name ? 'active' : ''"
-              class="slid-nav-component"
-            >{{item.desc}}</router-link>
+            <router-link :to="{name: item.name}" :class="$route.name===item.name ? 'active' : ''" class="slid-nav-component">{{item.desc}}</router-link>
           </div>
         </template>
       </div>
@@ -44,19 +36,18 @@ export default {
   color: #3f536e;
   background-color: #fff;
   z-index: 99;
+  font-size: 22px;
   .group-container {
     margin-bottom: 32px;
   }
   .side-nav-title {
     padding: 0 24px 8px;
-    color: #8dabc4;
-    font-size: 12px;
+    color: #FF6600;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
   .side-nav-items {
-    font-size: 14px;
     font-weight: normal;
     line-height: 1.8;
     a {
@@ -80,10 +71,10 @@ export default {
       position: relative;
       padding: 6px 24px 6px 32px;
       color: #616367;
-      font-size: 14px;
+      font-size: 20px;
     }
     .active {
-      color: #3faaf5;
+      color: #FF6600;
     }
   }
 }

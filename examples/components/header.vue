@@ -6,7 +6,6 @@
   >
     <div class="header-container">
       <router-link :to="{name: 'index'}">
-        to
         <!-- <img src="../assets/img/banner.png" width="100"> -->
       </router-link>
       <router-link :to="{name: 'giud'}">组件</router-link>

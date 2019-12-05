@@ -17,17 +17,18 @@ section {
     padding: 0;
     line-height: 1.7;
     color: #3f536e;
-    font-size: 14px;
-  }
-  h1 {
-    font-size: 24px;
+    font-size: 20px;
   }
   h1,h2,h3,h4,h5{
     margin: 16px 0;
+    font-size: 22px;
     line-height: 1.5;
   }
+  h1 {
+    font-size: 26px;
+  }
   h2 {
-    font-size: 18px;
+    font-size: 24px;
   }
   ul {
     margin: 16px 0;
@@ -37,10 +38,19 @@ section {
       line-height: 1.8;
     }
   }
+  P {
+    code {
+    color: #41B883;
+    padding: 3px 5px;
+    margin: 0 2px;
+    border-radius: 2px;
+    white-space: nowrap;
+    }
+  }
   pre {
     margin: 16px 0;
-    padding: 16px;
-    background-color: #F7F7F7;
+    padding: 16px 20px;
+    background-color: #FAFAFA;
     overflow: auto;
     code {
       padding: 0;
@@ -49,14 +59,6 @@ section {
       border-radius: 0;
       background-color: transparent;
     }
-  }
-  code {
-    padding: .3em .5em;
-    font-size: .9em;
-    vertical-align: middle;
-    border: 1px solid #ECECEC;
-    border-radius: 2px;
-    background-color: #F7F7F7;
   }
   code.code_inline {
     padding: 0 .5em;
@@ -68,14 +70,13 @@ section {
     margin-top: 8px;
   }
   a {
-    color: #6190e8;
+    color: #409EFF;
   }
   table.table {
-    display: block;
     width: 100%;
     background-color: #fff;
     color: #5e6d82;
-    font-size: 14px;
+    font-size: 20px;
     border-collapse: collapse;
     overflow: auto;
     margin-bottom: 50px;
@@ -83,12 +84,13 @@ section {
       border-top: 1px solid #f3f7fa;
       background-color: #FAFBFC;
       border-bottom: 1px solid #f3f7fa;
-      padding: 10px 8px;
+      padding: 20px 10px;
     }
     td{
       border-top: 1px solid #f3f7fa;
       border-bottom: 1px solid #f3f7fa;
-      padding: 10px 8px;
+      padding: 20px 10px;
+      text-align: center;
     }
   }
 }
