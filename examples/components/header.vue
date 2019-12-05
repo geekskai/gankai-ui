@@ -2,10 +2,14 @@
 <template>
   <header class="page-header">
     <div class="header-container">
-      <router-link :to="{name: 'index'}">
-        <!-- <img src="../assets/img/banner.png" width="100"> -->
-      </router-link>
-      <router-link :to="{name: 'giud'}">组件</router-link>
+      <a target="_blank" href="https://github.com/GitHubGanKai/gankai-ui">
+        <img src="../assets/img/github.png" alt="github" width="50" height="50" />
+      </a>
+      <div class="header-right">
+        <router-link :to="{name: 'index'}">主页</router-link>
+        <!-- <router-link :to="{name: 'index'}"></router-link> -->
+        <router-link :to="{name: 'giud'}">组件</router-link>
+      </div>
     </div>
   </header>
 </template>
@@ -19,7 +23,8 @@ export default {
 </script>
 <style type="text/scss" lang="scss">
 .page-header {
-  background: #2d3e50;
+  // background: #191414;
+   background: #2d3e50;
   border-bottom: 1px solid #48698a;
   position: relative !important;
   font-size: 22px;
@@ -36,8 +41,17 @@ export default {
     align-items: center;
     height: 80px;
     justify-content: space-between;
+    .header-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     a {
       color: #fff;
+      margin: 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
