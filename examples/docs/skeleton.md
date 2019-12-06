@@ -3,27 +3,6 @@
 ## 骨架屏样式组件
 当文本没有加载出来时，显示文本的默认占位图。
 
-<div class="demo-block">
-  <gk-row>
-    <gk-col :span="4">
-      <gk-skeleton></gk-skeleton>
-    </gk-col>
-    <gk-col :span="4" class="ml-10">
-      <gk-row>
-        <gk-col :span="12">
-          <gk-skeleton :proportion="0.2"></gk-skeleton>
-        </gk-col>
-        <gk-col :span="24" class="m-10">
-          <gk-skeleton :proportion="0.1"></gk-skeleton>
-        </gk-col>
-        <gk-col :span="24" class="m-10">
-          <gk-skeleton :proportion="0.1"></gk-skeleton>
-        </gk-col>                  
-      </gk-col>  
-    </gk-col>
-  </gk-row>
-</div>
-
 ::: demo
 ```html
 <gk-row>
@@ -40,8 +19,8 @@
         </gk-col>
         <gk-col :span="24" class="m-10">
           <gk-skeleton :proportion="0.1"></gk-skeleton>
-        </gk-col>                  
-      </gk-col>  
+        </gk-col>   
+      </gk-row>  
     </gk-col>
   </gk-row>
 ```

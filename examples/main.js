@@ -6,13 +6,13 @@ import router from './router'
 import demoBlock from './components/demo-block.vue'
 import GKUI from '../packages/index'
 // import('../packages/theme-default/lib/index.scss')
-
+import icons from './icon.json';
 import '../packages/theme-default/lib/index.css'
 
 import("./assets/style/index.scss");
 Vue.component('demo-block', demoBlock)
 Vue.use(GKUI)
-
+Vue.prototype.$icon = icons; // Icon 列表页用
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

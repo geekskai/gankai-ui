@@ -4,10 +4,12 @@
 ### 基础用法
 文本超出显示长度，折叠起来，通过len属性显示从何处开始折叠。
 
-<div class="demo-block">
+::: demo
+```html
   <gk-showmore :len='10' text='文本超出显示长度，折叠起来，通过len属性显示从何处开始折叠。'>
   </gk-showmore>
-</div>
+```
+:::
 
 ::: demo
 ```html
@@ -23,7 +25,8 @@
 ### 高级用法
 文本超出显示长度，折叠起来，展开后，可以通过```allow-fold```指定是否需要收起，也可通过```show-text```设置折叠时的文案，通过```hidden-text```设置收起的文案
 
-<div class="demo-block">
+::: demo
+```html
   <gk-showmore 
     allow-fold 
     show-text='show'
@@ -31,7 +34,8 @@
     :len='10' 
     text='文本超出显示长度，折叠起来，展开后，可以通过 allowFold 指定是否需要收起'>
   </gk-showmore>
-</div>
+```
+:::
 
 
 ::: demo

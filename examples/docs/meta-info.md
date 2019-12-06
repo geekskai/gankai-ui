@@ -7,15 +7,14 @@
 > 更多使用介绍：[处理seo的另一种思路](https://zhuanlan.zhihu.com/p/29148760?group_id=890298677627879424)
 ### 常规用法
 
-<div class="demo-block">
   <p>打开控制台，看看这个页面的 title, meta, 和 link 哦，是不是发生了变化</p>
-</div>
+
 
 
 ::: demo
 
-```js
-
+```html
+<script>
 export default {
     metaInfo: {
       title: 'My Example App',
@@ -29,45 +28,18 @@ export default {
       }]
     }
   }
-  
+</script>
 ```
 
 :::
 
 ### async 异步加载
 
-<div class="demo-block">
   <p>如果你的title或者meta或者link是异步加载的，那么你可能需要这样使用</p>
-</div>
-
 
 ::: demo
 
-```js
-
-export default {
-    name: 'async',
-    metaInfo () {
-      return {
-        title: this.pageName
-      }
-    },
-    data () {
-      return {
-        pageName: 'loading'
-      }
-    },
-    mounted () {
-      setTimeout(() => {
-        this.pageName = 'async'
-      }, 2000)
-    }
-  }
-  
-```
-
-:::
-
+```html
 
 <script>
   export default {
@@ -85,3 +57,7 @@ export default {
   }
 </script>
 
+
+```
+
+:::

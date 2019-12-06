@@ -78,7 +78,7 @@ export default {
       width: $radio-checked-size;
       height: $radio-checked-size;
       box-sizing: border-box;
-      border: 5px solid #5c5cee;
+      border: 6px solid #409EFF;
     }
   }
 
