@@ -27,7 +27,7 @@
       border-color: var(--tag-success-border);
       color: var(--tag-success-color);
 
-      & .el-tag__close:hover {
+      & .gk-tag__close:hover {
         background-color: var(--tag-success-color);
         color: var(--color-white);
       }
@@ -36,7 +36,7 @@
       background-color: var(--tag-primary-fill);
       border-color: var(--tag-primary-border);
       color: var(--tag-primary-color);
-      & .el-tag__close:hover {
+      & .gk-tag__close:hover {
         background-color: var(--tag-primary-color);
         color: var(--color-white);
       }
@@ -46,7 +46,7 @@
       border-color: var(--tag-warning-border);
       color: var(--tag-warning-color);
 
-      &.el-tag__close:hover {
+      &.gk-tag__close:hover {
         background-color: var(--tag-warning-color);
         color: var(--color-white);
       }
@@ -56,7 +56,7 @@
       border-color: var(--tag-danger-border);
       color: var(--tag-danger-color);
 
-      & .el-tag__close:hover {
+      & .gk-tag__close:hover {
         background-color: var(--tag-danger-color);
         color: var(--color-white);
       }

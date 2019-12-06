@@ -1,10 +1,9 @@
 import GkButton from './button/index.js';
-
 import GkRow from './row/index'
 import GkCol from './col/index'
-
+import GkRadio from './radio/index'
+import GkTooltip from './tooltip/index'
 import GkTag from './tag/index'
-
 import GkShowMore from './show-more/index'
 import GkLimitTextArea from './limit-textarea/index'
 import MetaInfo from './meta-info/index'
@@ -13,14 +12,13 @@ import GkLoadingBar from './loading-bar/index'
 import Skeleton from './skeleton/index'
 
 
-
-
-
 const components = [
     GkButton,
     GkRow,
     GkCol,
     GkTag,
+    GkRadio,
+    GkTooltip,
     GkShowMore,
     GkLimitTextArea,
     MetaInfo,
@@ -45,6 +43,8 @@ export default {
     GkCol,
     GkButton,
     GkTag,
+    GkRadio,
+    GkTooltip,
     GkShowMore,
     GkLimitTextArea,
     MetaInfo,

@@ -42,6 +42,11 @@
             "path": "/icon"
           },
           {
+            "desc": "Radio 单选框",
+            "name": "radio",
+            "path": "/radio"
+          },
+          {
             "desc": "Button 按钮",
             "name": "button",
             "path": "/button"

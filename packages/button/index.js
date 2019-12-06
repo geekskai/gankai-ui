@@ -1,6 +1,6 @@
 import GkButton from './src/button.vue'
 
-GkButton.intall = function (Vue){
+GkButton.install = function (Vue){
     Vue.component(GkButton.name,GkButton)
 }
 
