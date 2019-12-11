@@ -17,7 +17,7 @@ const assetsPath = function (_path) {
 }
 
 const webpackConfig = {
-  mode: 'development',
+  mode: 'production', // 默认会开启tree- shaking 和 scope hoisting
   entry: {
     app: './examples/main.js'
   },
@@ -32,6 +32,9 @@ const webpackConfig = {
     port: 9000,
     overlay: true,
     historyApiFallback: true
+  },
+  externals: {
+    'vue': 'Vue',
   },
   module: {
     rules: [
@@ -60,7 +63,6 @@ const webpackConfig = {
           }
         ]
       },
-
       {
         test: /\.(scss|css)$/,
         use: [
@@ -132,6 +134,10 @@ const webpackConfig = {
       title: 'gankai',            //title
       template: './index.html',       //指定一个html文件为模板
     }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash:7].css'
+    }),
+    new BundleAnalyzerPlugin(),
     new VueLoaderPlugin()                 //vue-loader插件开启
   ],
   resolve: {
@@ -146,16 +152,5 @@ const webpackConfig = {
     }
   },
 }
-console.log('88888888888888888',process.env);
-
-if (isProd) {
-  console.log('88888888888888888');
-  
-  webpackConfig.plugins.push(new MiniCssExtractPlugin({
-    filename: '[name].[contenthash:7].css'
-  }))
-  webpackConfig.plugins.push(new BundleAnalyzerPlugin())
-}
-
 
 module.exports = webpackConfig
