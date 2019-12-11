@@ -26,10 +26,11 @@ export default {
   background: #191414;
   //  background: #2d3e50;
   border-bottom: 1px solid #48698a;
-  position: relative !important;
+  position: fixed;
   font-size: 22px;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   height: 80px;
   transition: all 0.3s;

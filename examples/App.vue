@@ -44,6 +44,7 @@ export default {
 <style lang="scss" scoped>
 .app-body {
   margin: 20px 10%;
+  margin-top: 80px;
   display: flex;
   flex-direction: row;
   .nav {
