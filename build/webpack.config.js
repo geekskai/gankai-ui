@@ -5,21 +5,10 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');         // vue-loader 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); //css分离
 const HtmlWebpackPlugin = require('html-webpack-plugin');   //构建html文件
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');  // 清理构建目录下的文件
-const MarkdownItContainer = require('markdown-it-container')
 
 const config = require('../config')
-const striptags = require('./strip-tags')
 
-const wrapCustomClass = function (render) {
-  return function (...args) {
-    return render(...args)
-      .replace('<code class="', '<code class="hljs ')
-      .replace('<code>', '<code class="hljs">')
-  }
-}
-const convertHtml = function (str) {
-  return str.replace(/(&#x)(\w{4});/gi, $0 => String.fromCharCode(parseInt(encodeURIComponent($0).replace(/(%26%23x)(\w{4})(%3B)/g, '$2'), 16)))
-}
+
 const assetsPath = function (_path) {
   const assetsSubDirectory = process.env.NODE_ENV === 'production'
     ? config.build.assetsSubDirectory
@@ -71,53 +60,7 @@ const webpackConfig = {
           }
         ]
       },
-      // {
-      //   test: /\.md$/,
-      //   use: [
-      //     {
-      //       loader: 'vue-loader'
-      //     }, {
-      //       loader: 'vue-markdown-loader/lib/markdown-compiler',
-      //       options: {
-      //         preset: 'default',
-      //         breaks: true,
-      //         raw: true,
-      //         typographer: true,
-      //         preprocess: function (MarkdownIt, source) {
-      //           MarkdownIt.renderer.rules.table_open = function () {
-      //             return '<table class="table">'
-      //           }
-      //           MarkdownIt.renderer.rules.fence = wrapCustomClass(MarkdownIt.renderer.rules.fence)
-
-      //           // ```code`` 给这种样式加个class codeInline
-      //           const codeInline = MarkdownIt.renderer.rules.codeInline
-      //           MarkdownIt.renderer.rules.codeInline = function (...args) {
-      //             args[0][args[1]].attrJoin('class', 'codeInline')
-      //             return codeInline(...args)
-      //           }
-      //           return source
-      //         },
-      //         use: [
-      //           [MarkdownItContainer, 'demo', {
-      //             validate: params => params.trim().match(/^demo\s*(.*)$/),
-      //             render: function (tokens, idx) {
-      //               if (tokens[idx].nesting === 1) {
-      //                 // const html = tokens[idx + 1].content
-      //                 const html = convertHtml(striptags(tokens[idx + 1].content, 'script'))
-      //                 // 移除描述，防止被添加到代码块
-      //                 tokens[idx + 2].children = []
-      //                 return `<demo-block>
-      //                         <div slot="desc">${html}</div>
-      //                         <div slot="highlight">`
-      //               }
-      //               return '</div></demo-block>\n'
-      //             }
-      //           }]
-      //         ]
-      //       }
-      //     }
-      //   ]
-      // },
+      
       {
         test: /\.(scss|css)$/,
         use: [
