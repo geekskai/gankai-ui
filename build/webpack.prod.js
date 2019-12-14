@@ -133,7 +133,6 @@ const webpackConfig = {
       title: 'gankai',            //title
       template: './index.html',       //指定一个html文件为模板
       inlineSource: '.css$',
-      chunks: ['vendors'],
       inject: true,
       minify: {
         html5: true,
@@ -160,7 +159,7 @@ const webpackConfig = {
       },
       canPrint: true  // 是否打印编译过程中的日志
     }),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
     new VueLoaderPlugin()                 //vue-loader插件开启
   ],
   resolve: {
