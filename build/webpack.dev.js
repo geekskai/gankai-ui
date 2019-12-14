@@ -1,11 +1,10 @@
 const path = require('path')
 const webpack = require('webpack')
-const isProd = process.env.NODE_ENV === 'production';
+
 const VueLoaderPlugin = require('vue-loader/lib/plugin');         // vue-loader 编译vue文件
-const MiniCssExtractPlugin = require('mini-css-extract-plugin'); //css分离
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin'); //css分离
 const HtmlWebpackPlugin = require('html-webpack-plugin');   //构建html文件
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');  // 清理构建目录下的文件
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const config = require('../config')
 
 
@@ -64,8 +63,7 @@ const webpackConfig = {
       {
         test: /\.(scss|css)$/,
         use: [
-          // MiniCssExtractPlugin.loader,
-          isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+          'style-loader',
           // "style-loader", // 将 JS 字符串生成为 style 节点
           "css-loader", // 将 CSS 转化成 CommonJS 模块,
           {
@@ -146,16 +144,4 @@ const webpackConfig = {
     }
   },
 }
-console.log('88888888888888888',process.env);
-
-if (isProd) {
-  console.log('88888888888888888');
-  
-  webpackConfig.plugins.push(new MiniCssExtractPlugin({
-    filename: '[name].[contenthash:7].css'
-  }))
-  webpackConfig.plugins.push(new BundleAnalyzerPlugin())
-}
-
-
 module.exports = webpackConfig

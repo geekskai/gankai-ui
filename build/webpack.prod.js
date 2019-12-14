@@ -1,13 +1,13 @@
 const path = require('path')
 const webpack = require('webpack')
-const isProd = process.env.NODE_ENV === 'production';
+
 const VueLoaderPlugin = require('vue-loader/lib/plugin');         // vue-loader 编译vue文件
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); //css分离
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin') // 压缩css
 const HtmlWebpackPlugin = require('html-webpack-plugin');   //构建html文件
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');  // 清理构建目录下的文件
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const config = require('../config')
-
 
 const assetsPath = function (_path) {
   const assetsSubDirectory = process.env.NODE_ENV === 'production'
@@ -67,7 +67,7 @@ const webpackConfig = {
         test: /\.(scss|css)$/,
         use: [
           // MiniCssExtractPlugin.loader,
-          isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+          MiniCssExtractPlugin.loader,
           // "style-loader", // 将 JS 字符串生成为 style 节点
           "css-loader", // 将 CSS 转化成 CommonJS 模块,
           {
@@ -86,7 +86,6 @@ const webpackConfig = {
 
               ]
             }
-
           },
           {
             loader: 'px2rem-loader',
@@ -133,9 +132,33 @@ const webpackConfig = {
       filename: 'index.html',      //指定打包生成的文件名
       title: 'gankai',            //title
       template: './index.html',       //指定一个html文件为模板
+      inlineSource: '.css$',
+      chunks: ['vendors'],
+      inject: true,
+      minify: {
+        html5: true,
+        collapseWhitespace: true,
+        preserveLineBreaks: false,
+        minifyCSS: true,
+        minifyJS: true,
+        removeComments: false
+      }
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash:7].css'
+      filename: '[name]_[contenthash:8].css'
+    }),
+    new OptimizeCSSAssetsPlugin({
+      // 默认是全部的CSS都压缩，该字段可以指定某些要处理的文件
+      assetNameRegExp: /\.(sa|sc|c)ss$/g,
+      // 指定一个优化css的处理器，默认cssnano
+      cssProcessor: require('cssnano'),
+      cssProcessorPluginOptions: {
+        preset: ['default', {
+          discardComments: { removeAll: true }, //对注释的处理
+          normalizeUnicode: false // 建议false,否则在使用unicode-range的时候会产生乱码
+        }]
+      },
+      canPrint: true  // 是否打印编译过程中的日志
     }),
     new BundleAnalyzerPlugin(),
     new VueLoaderPlugin()                 //vue-loader插件开启
