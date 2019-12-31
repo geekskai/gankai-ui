@@ -2,7 +2,7 @@
   <div class="hover-tip">
     <div class="hover-tip__part">
       <slot name="hover-part">
-        <!-- <gk-icon name="help" size="18" /> -->
+        <gk-icon class="gk-icon-close fs-24" />
       </slot>
     </div>
     <div :class="[type, 'hover-tip__tip']">

@@ -6,7 +6,6 @@ import navConfig from '../nav.config.json'
 Vue.use(Router)
 
 let routes = []
-
 Object.keys(navConfig).forEach((key) => {
 
   routes = routes.concat(navConfig[key])

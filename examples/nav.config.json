@@ -63,8 +63,8 @@
         "path": "/component",
         "items": [
           {
-            "desc": "Showmore 显示更多",
-            "name": "show-more",
+            "desc": "ShowMore 显示更多",
+            "name": "showMore",
             "path": "/showMore"
           },
           {
@@ -76,6 +76,11 @@
             "desc": "metaInfo 三要素",
             "name": "meta-info",
             "path": "/meta-info"
+          },
+          {
+            "desc": "toolTips 提示",
+            "name": "toolTip",
+            "path": "/toolTip"
           },
           {
             "desc": "alert 警告",

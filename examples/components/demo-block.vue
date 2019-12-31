@@ -20,14 +20,14 @@
       <transition name="text-slide">
         <span v-show="hovering">{{ controlText }}</span>
       </transition>
-      <gk-tooltip effect="dark" :content="langConfig['tooltip-text']" placement="right">
+      <!-- <gk-tooltip effect="dark" :content="langConfig['tooltip-text']" placement="right"> -->
         <transition name="text-slide">
           <gk-button v-show="hovering || isExpanded" size="small" type="text" class="control-button" 
           @click.stop="goCodepen">
             {{ langConfig['button-text'] }}
           </gk-button>
         </transition>
-      </gk-tooltip>
+      <!-- </gk-tooltip> -->
     </div>
   </div>
 </template>

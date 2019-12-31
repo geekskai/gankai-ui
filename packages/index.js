@@ -10,7 +10,7 @@ import MetaInfo from './meta-info/index'
 import GkAlert from './alert/index'
 import GkLoadingBar from './loading-bar/index'
 import Skeleton from './skeleton/index'
-
+import GkRadioGroup from './radio-group/index'
 
 const components = [
     GkButton,
@@ -23,6 +23,7 @@ const components = [
     GkLimitTextArea,
     MetaInfo,
     GkAlert,
+    GkRadioGroup,
     Skeleton
 ]
 
@@ -41,6 +42,7 @@ export default {
     install,
     GkRow,
     GkCol,
+    GkRadioGroup,
     GkButton,
     GkTag,
     GkRadio,
